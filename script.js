@@ -26,3 +26,31 @@ botonEnlaces.addEventListener('click', (event) => {
     alert(`TAREA #3Total de enlaces: ${totalEnlaces} - Primer enlace: ${primerEnlace.href} - Último enlace: ${ultimoEnlace.href}`);
 });
 
+const contenedor = document.getElementById('contenedor');
+const segundos = document.querySelectorAll('.segundo');
+const tercerosenOls = document.querySelector('ol .tercero');
+
+// 4. Dale el texto "¡Hola!" a la sección con id="contenedor"
+// NOTA: Si ejecutas esto, reemplaza el contenido interno de #contenedor (borrando el <ul>).
+// Si quieres ver el nuevo <li> en pantalla, puedes comentar esta línea mientras pruebas.
+contenedor.querySelector("p").textContent = "¡Hola!";
+
+// 5. Añade la clase principal al div con class="footer"
+const footer = document.querySelector('.footer');
+footer.classList.add('principal');
+
+// 6. Elimina la clase principal del div con class="footer"
+footer.classList.remove('principal');
+
+// 7. Crea un nuevo elemento li
+const nuevoLi = document.createElement('li');
+
+// 8. Dale al li el texto "cuatro"
+nuevoLi.textContent = 'cuatro';
+
+// 9. Añade el li al elemento ul
+const ul = document.querySelector('ul');
+if (ul) {
+    ul.append(nuevoLi);
+}
+
